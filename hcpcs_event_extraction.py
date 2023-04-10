@@ -6,13 +6,9 @@ import json
 
 def hcpcs_event_extraction(subject_id):
     # EXCTRACTING HCPCS EVENTS
-    df = pd.read_csv("path/to/hcpcsevents.csv")
-    df_ = pd.read_csv("path/to/d_hcpcs.csv")
+    df = pd.read_csv("MIMIC/hcpcsevents.csv")
+    df_ = pd.read_csv("MIMIC/d_hcpcs.csv")
     hcpcs_events = []
-
-    patient_df = pd.read_csv("path/to/patients.csv")
-    if (not os.path.exists("path/to/hcpcs_patientwise")):
-        os.mkdir("path/to/hcpcs_patientwise")
 
     for index, row in df.loc[df['subject_id'] == subject_id].iterrows():
             chart_date = row[2]

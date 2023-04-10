@@ -5,11 +5,8 @@ import json
 
 def drg_code_extraction(subject_id):
     # Extracting DRG codes associated with a single patient id
-    patient_df = pd.read_csv("Path/To//patients.csv")
-    df = pd.read_csv("/content/drive/MyDrive/MIMIC/drgcodes.csv")
-
-    if (not os.path.exists("Path/To/drg_code_patientwise")):
-        os.mkdir("Path/To/drg_code_patientwise")
+    patient_df = pd.read_csv("MIMIC/patients.csv")
+    df = pd.read_csv("MIMIC/drgcodes.csv")
 
     drg_list = []
 

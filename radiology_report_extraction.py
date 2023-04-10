@@ -2,8 +2,8 @@ import pandas as pd
 
 def radiology_report_extraction(subject_id):
   #EXTRACTING RADIOLOGY REPORTS
-  df = pd.read_csv("/content/drive/MyDrive/MIMIC/radiology.csv")
-  df_ = pd.read_csv("/content/drive/MyDrive/MIMIC/radiology_detail.csv")
+  df = pd.read_csv("MIMIC/radiology.csv")
+  df_ = pd.read_csv("MIMIC/radiology_detail.csv")
   radiology_reports = []
   for index, row in df.loc[df['subject_id'] == subject_id].iterrows():
 

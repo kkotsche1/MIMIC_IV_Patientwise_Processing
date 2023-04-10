@@ -2,8 +2,8 @@ import pandas as pd
 
 def poe_entry_extraction(subject_id):
     # EXTRACTING POE ENTRIES FOR INDIVIDUAL SUBJECT IDS
-    df = pd.read_csv("path/to/poe.csv", low_memory=False)
-    df_ = pd.read_csv("path/to/poe_detail.csv")
+    df = pd.read_csv("MIMIC/poe.csv", low_memory=False)
+    df_ = pd.read_csv("MIMIC/poe_detail.csv")
     poe_entries = []
 
     for index, row in df.loc[df['subject_id'] == subject_id].iterrows():

@@ -6,15 +6,10 @@ import json
 def diagnosis_extraction(subject_id):
     # Creating a for loop to iterate over each patients whos records we want to extract
 
-    patient_df = pd.read_csv("Filepath/to/patients.csv")
+    patient_df = pd.read_csv("MIMIC/patients.csv")
 
-    df = pd.read_csv("Filepath/to/diagnoses_icd.csv")
-    diagnosis_df = pd.read_csv("Filepath/to/d_icd_diagnoses.csv")
-
-    if (not os.path.exists("Filepath/to/diagnosis_patientwise")):
-        os.mkdir("Filepath/to/diagnosis_patientwise")
-
-
+    df = pd.read_csv("MIMIC/diagnoses_icd.csv")
+    diagnosis_df = pd.read_csv("MIMIC/d_icd_diagnoses.csv")
 
     diagnosis_list = []
 

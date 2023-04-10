@@ -3,7 +3,7 @@ import pandas as pd
 def pharmacy_event_extraction(subject_id):
   #EXTRACTING PHARMACY ENTRIES
 
-  df = pd.read_csv("/content/drive/MyDrive/MIMIC/pharmacy.csv", low_memory=False)
+  df = pd.read_csv("MIMIC/pharmacy.csv", low_memory=False)
   pharmacy_entries = []
 
 

@@ -4,7 +4,7 @@ def service_data_extraction(subject_id):
   #EXTRACTING TRANSFER DATA FOR INDIVIDUAL SUBJECT ID, KEY AT THE FOLLOWING WEBSITE
   #https://github.com/MIT-LCP/mimic-iv-website/blob/master/content/hosp/services.md
 
-  df = pd.read_csv("/content/drive/MyDrive/MIMIC/services.csv")
+  df = pd.read_csv("MIMIC/services.csv")
   services = []
 
 

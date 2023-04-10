@@ -16,7 +16,7 @@ from individual_master_list import individual_master_list
 
 #Selecting a user ID for which to compile information
 
-df = pd.read_csv("/content/drive/MyDrive/MIMIC/patients.csv")
+df = pd.read_csv("MIMIC/patients.csv")
 
 for index, row in df.iterrows():
   subject_id = row[0]
@@ -25,5 +25,5 @@ for index, row in df.iterrows():
   final_dictionary["anchor_age"] = row[2]
   final_dictionary["date_of_death"] = row[-1]
 
-  with open (f"path/to/individual_subject_files/{subject_id}.json", "w") as f:
+  with open (f"individual_subject_files/{subject_id}.json", "w") as f:
     json.dump(final_dictionary, f)

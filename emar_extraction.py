@@ -7,14 +7,10 @@ import json
 def emar_extraction(subject_id):
     # Extracting EMARs for individual patients
 
-    df = pd.read_csv("path/to/emar.csv")
+    df = pd.read_csv("MIMIC/emar.csv")
     emar_list = []
 
-    patient_df = pd.read_csv("path/to/patients.csv")
-    if (not os.path.exists("path/to/emar_patientwise")):
-        os.mkdir("path/to/emar_patientwise")
-
-
+    patient_df = pd.read_csv("MIMIC/patients.csv")
 
     for index, row in df.loc[df['subject_id'] == subject_id].iterrows():
             emar_list.append({"charttime": row[7], "medication": row[8], "event_txt": row[9], "scheduletime": row[10],
@@ -24,7 +20,7 @@ def emar_extraction(subject_id):
 
         #EMAR FILE HAS BEEN SPLIT INTO 5 INDIVIDUAL CSVs PRIOR TO RUNNING THIS CODE FOR RAM REASONS
     for index_ in [0, 1, 2, 3, 4, 5]:
-            df_detail = pd.read_csv(f"path/to/emar_detail{index_}.csv")
+            df_detail = pd.read_csv(f"MIMIC/emar_detail{index_}.csv")
             for list_index, item in enumerate(emar_list):
                 for index, row in df_detail.loc[df_detail['emar_id'] == item["emar_id"]].iterrows():
                     emar_list[list_index]["administration_type"] = row[4]

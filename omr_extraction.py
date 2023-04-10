@@ -3,7 +3,7 @@ import pandas as pd
 def omr_extraction(subject_id):
   #EXTRACTING OMR ENTRIES - IE WEIGHT, HEIGHT, BMI
 
-  df = pd.read_csv("path/to/omr.csv")
+  df = pd.read_csv("MIMIC/omr.csv")
   omr_entries = []
 
   for index, row in df.loc[df['subject_id'] == subject_id].iterrows():

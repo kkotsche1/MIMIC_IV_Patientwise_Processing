@@ -3,7 +3,7 @@ import pandas as pd
 def prescription_extraction(subject_id):
   #GETTING PRESCRIPTIONS DATA FOR INDIVIDUAL SUBJECT ID
 
-  df = pd.read_csv("/content/drive/MyDrive/MIMIC/prescriptions.csv", low_memory = False)
+  df = pd.read_csv("MIMIC/prescriptions.csv", low_memory = False)
   prescriptions = []
 
 

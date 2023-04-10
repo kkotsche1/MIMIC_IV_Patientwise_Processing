@@ -10,11 +10,11 @@ def lab_item_extraction(subject_id):
   lab_events = []
 
   #LABCODE DATA
-  df_ = pd.read_csv("path/to/d_labitems.csv")
+  df_ = pd.read_csv("MIMIC/d_labitems.csv")
 
   for index in range(0,12):
     #PATIENT DATA
-    df = pd.read_csv(f"path/to/labevents{index}.csv")
+    df = pd.read_csv(f"MIMIC/labevents{index}.csv")
     #MATCHING LAB ROWS FOR SPECIFIC SUBJECT_ID
     for index, row in df.loc[df['subject_id'] == subject_id].iterrows():
       #MATCHING LAB ITEMID TO MASTER SHEET TO GET THE RELEVANT LABITEM NAME

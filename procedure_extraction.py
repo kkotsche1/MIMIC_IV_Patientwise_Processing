@@ -3,8 +3,8 @@ import pandas as pd
 def procedure_extraction(subject_id):
     # Extracting Procedures for individual subject_IDs
 
-    df = pd.read_csv("/content/drive/MyDrive/MIMIC/procedures_icd.csv")
-    df_ = pd.read_csv("/content/drive/MyDrive/MIMIC/d_icd_procedures.csv")
+    df = pd.read_csv("MIMIC/procedures_icd.csv")
+    df_ = pd.read_csv("MIMIC/d_icd_procedures.csv")
     procedures = []
 
     for index, row in df.loc[df['subject_id'] == subject_id].iterrows():

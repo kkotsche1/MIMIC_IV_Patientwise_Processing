@@ -3,7 +3,7 @@ import pandas as pd
 
 def transfer_data_extraction(subject_id):
   #EXTRACTING TRANSFER DATA 2
-  df = pd.read_csv("/content/drive/MyDrive/MIMIC/transfers.csv")
+  df = pd.read_csv("MIMIC/transfers.csv")
   transfers = []
 
   for index, row in df.loc[df['subject_id'] == subject_id].iterrows():
