@@ -4,7 +4,7 @@ import os
 
 def microbiology_extraction(subject_id):
   #EXTRACTING MICROBIOLOGY EVENTS
-  df = pd.read_csv("MIMIC/microbiologyevents.csv")
+  df = pd.read_csv("MIMIC/microbiologyevents.csv", low_memory=False)
   microbiology_events = []
 
   for index, row in df.loc[df['subject_id'] == subject_id].iterrows():

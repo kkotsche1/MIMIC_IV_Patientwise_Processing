@@ -9,8 +9,8 @@ def poe_entry_extraction(subject_id):
     for index, row in df.loc[df['subject_id'] == subject_id].iterrows():
         poe_id = row[0]
         hadm_id = row[3]
-        field_name = "nan"
-        field_value = "nan"
+        field_name = ""
+        field_value = ""
 
         for index_, row_ in df_.loc[df_['poe_id'] == poe_id].iterrows():
             field_name = row_[3]

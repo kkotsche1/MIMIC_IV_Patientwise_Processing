@@ -10,6 +10,7 @@ def hcpcs_event_extraction(subject_id):
     df_ = pd.read_csv("MIMIC/d_hcpcs.csv")
     hcpcs_events = []
 
+
     for index, row in df.loc[df['subject_id'] == subject_id].iterrows():
             chart_date = row[2]
             description = row[5]
@@ -23,5 +24,3 @@ def hcpcs_event_extraction(subject_id):
                  "hadm_id": hadm_id})
 
     return hcpcs_events
-
-
